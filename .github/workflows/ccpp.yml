@@ -57,6 +57,7 @@ jobs:
             libgpod-devel
             libmtp-devel
             libchromaprint-devel
+            libmygpo-qt5-devel
             desktop-file-utils
             update-desktop-files
             appstream-glib
@@ -130,6 +131,7 @@ jobs:
             libgpod-devel
             libmtp-devel
             libchromaprint-devel
+            libmygpo-qt5-devel
             desktop-file-utils
             update-desktop-files
             appstream-glib
@@ -296,6 +298,7 @@ jobs:
             libgpod-devel
             libmtp-devel
             libchromaprint-devel
+            libmygpo-qt5-devel
             desktop-file-utils
             update-desktop-files
             appstream-glib
@@ -464,6 +467,7 @@ jobs:
             libgpod-devel
             libmtp-devel
             libchromaprint-devel
+            libmygpo-qt5-devel
             desktop-file-utils
             update-desktop-files
             appstream-glib
@@ -497,6 +501,8 @@ jobs:
       - uses: actions/checkout@v1.2.0
       - name: Add tagparser repo
         run: zypper -n ar -c -f -n 'repo-tagparser' https://download.opensuse.org/repositories/home:/mkittler/openSUSE_Tumbleweed/ repo-tagparser
+      - name: Add libmygpo repo
+        run: zypper -n ar -c -f -n 'repo-libmygpo' https://download.opensuse.org/repositories/home:/jonaski:/libraries/openSUSE_Tumbleweed/ repo-libmygpo
       - name: Update packages
         run: zypper --non-interactive --gpg-auto-import-keys ref
       - name: Upgrade packages
@@ -546,6 +552,7 @@ jobs:
             libgpod-devel
             libmtp-devel
             libchromaprint-devel
+            libmygpo-qt6-devel
             desktop-file-utils
             update-desktop-files
             appstream-glib
@@ -624,6 +631,7 @@ jobs:
             libmtp-devel
             libchromaprint-devel
             fftw-devel
+            libmygpo-qt5-devel
             desktop-file-utils
             libappstream-glib
             hicolor-icon-theme
@@ -771,6 +779,7 @@ jobs:
             libcdio-dev
             libmtp-dev
             libgpod-dev
+            libmygpo-qt-dev
       - name: Create Build Environment
         shell: bash
         run: cmake -E make_directory build
@@ -829,6 +838,7 @@ jobs:
             libcdio-dev
             libmtp-dev
             libgpod-dev
+            libmygpo-qt-dev
       - name: Create Build Environment
         shell: bash
         run: cmake -E make_directory build
@@ -892,6 +902,7 @@ jobs:
             libcdio-dev
             libmtp-dev
             libgpod-dev
+            libmygpo-qt-dev
       - name: Create Build Environment
         shell: bash
         run: cmake -E make_directory build
@@ -955,6 +966,7 @@ jobs:
             libcdio-dev
             libmtp-dev
             libgpod-dev
+            libmygpo-qt-dev
       - name: Create Build Environment
         shell: bash
         run: cmake -E make_directory build
@@ -1018,6 +1030,7 @@ jobs:
             libcdio-dev
             libmtp-dev
             libgpod-dev
+            libmygpo-qt-dev
       - name: Create Build Environment
         shell: bash
         run: cmake -E make_directory build
@@ -1081,6 +1094,7 @@ jobs:
             libcdio-dev
             libmtp-dev
             libgpod-dev
+            libmygpo-qt-dev
       - name: Create Build Environment
         shell: bash
         run: cmake -E make_directory build
